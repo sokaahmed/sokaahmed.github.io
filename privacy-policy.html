@@ -1,22 +1,927 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Privacy Policy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Download Video: Anime, Reels HD</title>
+  <meta name="description" content="Privacy Policy for Download Video: Anime, Reels HD — Android application." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Design Tokens ───────────────────────────────────── */
+    :root {
+      --ink:        #0c0f1a;
+      --ink-soft:   #3b4265;
+      --ink-muted:  #7880a0;
+      --canvas:     #f7f8fc;
+      --surface:    #ffffff;
+      --surface-2:  #f0f3ff;
+      --border:     #e2e6f3;
+      --border-2:   #d0d6ef;
+      --accent:     #2c47e0;
+      --accent-2:   #1a31b8;
+      --accent-glow:rgba(44,71,224,.12);
+      --gold:       #c9a84c;
+      --gold-light: #fdf3dc;
+      --danger-bg:  #fff4f1;
+      --danger-bd:  #fad1c4;
+      --danger-txt: #c0330f;
+      --radius-sm:  10px;
+      --radius-md:  18px;
+      --radius-lg:  28px;
+      --shadow-sm:  0 2px 8px rgba(12,15,26,.06);
+      --shadow-md:  0 8px 32px rgba(12,15,26,.09);
+      --shadow-lg:  0 20px 60px rgba(12,15,26,.12);
+      --font-serif: 'DM Serif Display', Georgia, serif;
+      --font-sans:  'DM Sans', system-ui, sans-serif;
+      --transition: 200ms cubic-bezier(.4,0,.2,1);
+    }
+
+    /* ── Reset ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--canvas);
+      min-height: 100vh;
+    }
+
+    /* ── Background Decoration ───────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(44,71,224,.07) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 90% 110%, rgba(201,168,76,.06) 0%, transparent 55%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Layout ──────────────────────────────────────────── */
+    .page {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    /* ── Header / Hero ───────────────────────────────────── */
+    .hero {
+      position: relative;
+      background: linear-gradient(140deg, #0c0f1a 0%, #1a2680 55%, #0f1c6e 100%);
+      border-radius: var(--radius-lg);
+      padding: 48px 44px;
+      margin-bottom: 32px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      animation: fadeUp .6s ease both;
+    }
+
+    /* geometric accent */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: 10%;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(44,71,224,.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .app-icon-wrap {
+      flex-shrink: 0;
+      width: 84px; height: 84px;
+      border-radius: 22px;
+      background: rgba(255,255,255,.08);
+      border: 1.5px solid rgba(255,255,255,.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.3);
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-text { flex: 1; min-width: 220px; }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(201,168,76,.18);
+      border: 1px solid rgba(201,168,76,.35);
+      color: #e2c87a;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(24px, 4vw, 34px);
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .hero-sub {
+      color: rgba(255,255,255,.65);
+      font-size: 15px;
+      max-width: 540px;
+      line-height: 1.6;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.13);
+      color: rgba(255,255,255,.8);
+      font-size: 13px;
+      padding: 7px 14px;
+      border-radius: 100px;
+      backdrop-filter: blur(6px);
+    }
+    .badge-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #4ade80;
+      flex-shrink: 0;
+    }
+
+    /* ── Table of Contents ───────────────────────────────── */
+    .toc-card {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 32px;
+      margin-bottom: 28px;
+      animation: fadeUp .6s .1s ease both;
+    }
+
+    .toc-title {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 16px;
+    }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 8px 24px;
+    }
+
+    .toc-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 4px 0;
+      transition: color var(--transition), gap var(--transition);
+    }
+    .toc-link:hover { color: var(--accent-2); gap: 12px; }
+    .toc-link .num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      opacity: .5;
+      min-width: 18px;
+    }
+
+    /* ── Section Cards ───────────────────────────────────── */
+    .section-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 36px 40px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow var(--transition), border-color var(--transition);
+      animation: fadeUp .6s .15s ease both;
+    }
+    .section-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-2);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .section-icon {
+      width: 44px; height: 44px;
+      border-radius: var(--radius-sm);
+      background: var(--accent-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .section-num {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      opacity: .6;
+      margin-bottom: 2px;
+    }
+
+    .section-card h2 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      color: var(--ink);
+      line-height: 1.25;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 20px 0;
+    }
+
+    /* ── Typography ──────────────────────────────────────── */
+    p { margin-bottom: 14px; color: var(--ink-soft); font-size: 15.5px; }
+    p:last-child { margin-bottom: 0; }
+
+    strong { color: var(--ink); font-weight: 600; }
+
+    ul, ol {
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 14px;
+    }
+
+    li {
+      position: relative;
+      padding: 7px 0 7px 26px;
+      color: var(--ink-soft);
+      font-size: 15px;
+      border-bottom: 1px solid var(--border);
+    }
+    li:last-child { border-bottom: none; }
+    li::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 16px;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: .45;
+    }
+
+    /* ── Inline highlight boxes ──────────────────────────── */
+    .info-box {
+      background: var(--surface-2);
+      border: 1px solid #d0d9ff;
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      margin: 18px 0;
+      font-size: 14.5px;
+      color: var(--ink-soft);
+    }
+    .info-box strong { color: var(--accent); }
+
+    .warn-box {
+      background: var(--danger-bg);
+      border: 1px solid var(--danger-bd);
+      border-left: 3px solid #e2572a;
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      margin: 18px 0;
+      font-size: 14px;
+      color: var(--danger-txt);
+    }
+
+    .gold-box {
+      background: var(--gold-light);
+      border: 1px solid #f0d68a;
+      border-left: 3px solid var(--gold);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      margin: 18px 0;
+      font-size: 14.5px;
+      color: #7a5c10;
+    }
+
+    /* ── Two-column grid ─────────────────────────────────── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 18px 0;
+    }
+    @media (max-width: 540px) { .two-col { grid-template-columns: 1fr; } }
+
+    .chip-card {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 16px 18px;
+    }
+    .chip-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 6px;
+    }
+    .chip-value { font-size: 15px; font-weight: 500; color: var(--ink); }
+
+    /* ── Ad Provider pills ───────────────────────────────── */
+    .provider-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 14px 0;
+    }
+    .provider-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface-2);
+      border: 1px solid var(--border-2);
+      border-radius: 100px;
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .provider-pill .icon { font-size: 18px; }
+
+    /* ── Permission row ──────────────────────────────────── */
+    .perm-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .perm-row:last-child { border-bottom: none; }
+    .perm-icon {
+      width: 40px; height: 40px;
+      border-radius: var(--radius-sm);
+      background: var(--accent-glow);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; flex-shrink: 0;
+    }
+    .perm-name { font-weight: 600; font-size: 15px; color: var(--ink); margin-bottom: 2px; }
+    .perm-desc { font-size: 14px; color: var(--ink-muted); }
+
+    /* ── Effective date banner ───────────────────────────── */
+    .eff-date {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin-bottom: 20px;
+    }
+    .eff-date strong { color: var(--ink); }
+
+    /* ── Contact card ────────────────────────────────────── */
+    .contact-card {
+      background: linear-gradient(135deg, var(--surface-2) 0%, #e8ecff 100%);
+      border: 1px solid #d0d9ff;
+      border-radius: var(--radius-md);
+      padding: 28px 32px;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .contact-icon { font-size: 36px; }
+    .contact-info h3 { font-size: 17px; color: var(--ink); margin-bottom: 4px; }
+    .contact-info p { font-size: 14px; color: var(--ink-muted); margin: 0; }
+    .contact-info a { color: var(--accent); font-weight: 500; text-decoration: none; }
+    .contact-info a:hover { text-decoration: underline; }
+
+    /* ── Footer ──────────────────────────────────────────── */
+    .footer {
+      margin-top: 40px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      animation: fadeUp .6s .3s ease both;
+    }
+    .footer-brand { font-size: 14px; color: var(--ink-muted); }
+    .footer-brand strong { color: var(--ink); }
+    .footer-links { display: flex; gap: 18px; }
+    .footer-links a { font-size: 13px; color: var(--ink-muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--accent); }
+
+    /* ── Animations ──────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Responsive ──────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .page { padding: 20px 14px 60px; }
+      .hero { padding: 30px 22px; }
+      .section-card { padding: 26px 22px; }
+      .contact-card { padding: 22px 20px; }
+    }
+
+    a { color: var(--accent); }
+  </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
+  <div class="page">
 
-  <p>Your privacy is important to us.</p>
+    <!-- ── HERO ─────────────────────────────────────────────── -->
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="app-icon-wrap">🎬</div>
+        <div class="hero-text">
+          <div class="hero-eyebrow">
+            <span>📄</span> Legal Document
+          </div>
+          <h1>Privacy Policy</h1>
+          <p class="hero-sub">
+            Download Video: Anime, Reels HD &mdash; Android Application.<br />
+            This document explains how we collect, use, and protect your information.
+          </p>
+          <div class="hero-badges">
+            <div class="badge"><span class="badge-dot"></span> No Login Required</div>
+            <div class="badge">📱 Android</div>
+            <div class="badge">🔒 GDPR &amp; Google Play Compliant</div>
+            <div class="badge">📅 Effective: Jan 1, 2026</div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-  <h2>Information We Collect</h2>
-  <p>We may collect basic information such as device information and usage data.</p>
+    <!-- ── TABLE OF CONTENTS ─────────────────────────────────── -->
+    <nav class="toc-card" aria-label="Table of Contents">
+      <div class="toc-title">Table of Contents</div>
+      <div class="toc-grid">
+        <a class="toc-link" href="#s1"><span class="num">01</span> Information We Collect</a>
+        <a class="toc-link" href="#s2"><span class="num">02</span> Media &amp; File Access</a>
+        <a class="toc-link" href="#s3"><span class="num">03</span> How We Use Information</a>
+        <a class="toc-link" href="#s4"><span class="num">04</span> Advertising &amp; Ad Services</a>
+        <a class="toc-link" href="#s5"><span class="num">05</span> Third-Party Services</a>
+        <a class="toc-link" href="#s6"><span class="num">06</span> Legal Basis (GDPR)</a>
+        <a class="toc-link" href="#s7"><span class="num">07</span> Data Retention</a>
+        <a class="toc-link" href="#s8"><span class="num">08</span> Data Security</a>
+        <a class="toc-link" href="#s9"><span class="num">09</span> Children's Privacy</a>
+        <a class="toc-link" href="#s10"><span class="num">10</span> Your Rights &amp; Choices</a>
+        <a class="toc-link" href="#s11"><span class="num">11</span> Policy Changes</a>
+        <a class="toc-link" href="#s12"><span class="num">12</span> Contact Us</a>
+      </div>
+    </nav>
 
-  <h2>Advertising</h2>
-  <p>We use Google AdMob to display ads.</p>
+    <!-- ── INTRO ─────────────────────────────────────────────── -->
+    <section class="section-card" id="intro">
+      <div class="eff-date">📅 <strong>Effective Date:</strong> January 1, 2026 &nbsp;·&nbsp; Last Updated: January 1, 2026</div>
+      <p>
+        This Privacy Policy applies to the mobile application <strong>Download Video: Anime, Reels HD</strong>
+        (hereinafter "the App", "we", "our", or "us"). By installing or using the App, you agree to the terms
+        described in this Privacy Policy.
+      </p>
+      <div class="two-col">
+        <div class="chip-card">
+          <div class="chip-label">App Name</div>
+          <div class="chip-value">Download Video: Anime, Reels HD</div>
+        </div>
+        <div class="chip-card">
+          <div class="chip-label">Platform</div>
+          <div class="chip-value">Android (Google Play)</div>
+        </div>
+        <div class="chip-card">
+          <div class="chip-label">Account / Login</div>
+          <div class="chip-value">Not Required</div>
+        </div>
+        <div class="chip-card">
+          <div class="chip-label">Contact</div>
+          <div class="chip-value">your-email@example.com</div>
+        </div>
+      </div>
+      <div class="info-box">
+        <strong>Important:</strong> If you do not agree with the terms of this Privacy Policy, please
+        uninstall and discontinue use of the App. Continued use constitutes acceptance.
+      </div>
+    </section>
 
-  <h2>Contact Us</h2>
-  <p>If you have any questions, contact us.</p>
+    <!-- ── S1: Information We Collect ───────────────────────── -->
+    <section class="section-card" id="s1">
+      <div class="section-header">
+        <div class="section-icon">🗂️</div>
+        <div>
+          <div class="section-num">Section 01</div>
+          <h2>Information We Collect</h2>
+        </div>
+      </div>
+      <p>
+        The App does <strong>not</strong> require you to create an account, sign in, or provide any personal
+        information such as your name, email address, or phone number to use its core features.
+      </p>
+      <p>
+        However, the App and its integrated third-party services may automatically collect certain non-personally
+        identifying information as described below:
+      </p>
+      <ul>
+        <li><strong>Device Information:</strong> Device model, operating system version, language setting, and screen resolution.</li>
+        <li><strong>App Usage Data:</strong> Feature interactions, session duration, and app navigation patterns used to improve user experience.</li>
+        <li><strong>Advertising Identifiers:</strong> Google Advertising ID (GAID) and other resettable ad identifiers used for ad delivery and measurement.</li>
+        <li><strong>Crash &amp; Diagnostic Data:</strong> App crashes, error logs, and performance metrics to help us diagnose and fix issues.</li>
+        <li><strong>Network Information:</strong> IP address and general connection type (Wi-Fi / mobile) used for service delivery and security.</li>
+        <li><strong>Downloaded Content Metadata:</strong> File names and formats of media you choose to download, stored locally on your device only.</li>
+      </ul>
+      <div class="info-box">
+        We do <strong>not</strong> collect sensitive personal information such as precise location, contacts,
+        messages, browsing history, health data, or financial information.
+      </div>
+    </section>
 
+    <!-- ── S2: Media & File Access ───────────────────────────── -->
+    <section class="section-card" id="s2">
+      <div class="section-header">
+        <div class="section-icon">📁</div>
+        <div>
+          <div class="section-num">Section 02</div>
+          <h2>Media &amp; File Access (Device Permissions)</h2>
+        </div>
+      </div>
+      <p>
+        To save and display the videos and images you download, the App may request the following device permissions.
+        These are the <strong>only</strong> permissions we request.
+      </p>
+
+      <div class="perm-row">
+        <div class="perm-icon">🖼️</div>
+        <div>
+          <div class="perm-name">Photos / Media Storage</div>
+          <div class="perm-desc">
+            Required to save downloaded videos and images to your device's gallery.
+            On Android 13+, this maps to <code>READ_MEDIA_VIDEO</code> and <code>READ_MEDIA_IMAGES</code>.
+            On older versions, it maps to <code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code>.
+          </div>
+        </div>
+      </div>
+      <div class="perm-row">
+        <div class="perm-icon">🌐</div>
+        <div>
+          <div class="perm-name">Internet Access</div>
+          <div class="perm-desc">
+            Required to fetch video content and serve advertisements. This is a standard permission
+            and does not expose personal data.
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="gold-box">
+        ✅ &nbsp;<strong>We do not access:</strong> Contacts, SMS/MMS, microphone, camera, location, call logs,
+        calendar, or any unrelated personal files on your device. Downloaded media is stored <strong>locally on your device only</strong>
+        and is never uploaded to our servers.
+      </div>
+    </section>
+
+    <!-- ── S3: How We Use Information ────────────────────────── -->
+    <section class="section-card" id="s3">
+      <div class="section-header">
+        <div class="section-icon">⚙️</div>
+        <div>
+          <div class="section-num">Section 03</div>
+          <h2>How We Use Information</h2>
+        </div>
+      </div>
+      <p>Information collected through the App and third-party SDKs is used for the following purposes:</p>
+      <ul>
+        <li><strong>App Functionality:</strong> To provide, operate, and maintain the downloading and media management features of the App.</li>
+        <li><strong>Performance &amp; Improvement:</strong> To analyze usage patterns, diagnose technical issues, and continuously improve the App's quality.</li>
+        <li><strong>Advertising:</strong> To display relevant advertisements and measure ad performance through third-party ad networks (see Section 04).</li>
+        <li><strong>Security:</strong> To detect, investigate, and prevent fraudulent or unauthorized use of the App.</li>
+        <li><strong>Legal Compliance:</strong> To comply with applicable laws, regulations, and Google Play Developer Policies.</li>
+      </ul>
+      <div class="info-box">
+        We do <strong>not</strong> sell, rent, or trade your personal information to third parties for their independent marketing purposes.
+      </div>
+    </section>
+
+    <!-- ── S4: Advertising ───────────────────────────────────── -->
+    <section class="section-card" id="s4">
+      <div class="section-header">
+        <div class="section-icon">📢</div>
+        <div>
+          <div class="section-num">Section 04</div>
+          <h2>Advertising &amp; Ad Services</h2>
+        </div>
+      </div>
+      <p>
+        The App is free to use and is supported by in-app advertisements. We use the following advertising
+        SDKs to display ads. These providers may collect data to serve personalized or non-personalized ads.
+      </p>
+
+      <div class="provider-list">
+        <div class="provider-pill"><span class="icon">🟦</span> Google AdMob</div>
+        <div class="provider-pill"><span class="icon">🟣</span> Facebook Audience Network (Meta)</div>
+      </div>
+
+      <p>These advertising partners may collect and use:</p>
+      <ul>
+        <li>Advertising identifiers (e.g., Google Advertising ID)</li>
+        <li>Device information (model, OS version, screen size)</li>
+        <li>IP address and approximate location derived from IP</li>
+        <li>Ad interaction data (clicks, impressions, conversions)</li>
+        <li>Behavioral and interest-based data for ad targeting</li>
+      </ul>
+
+      <div class="divider"></div>
+      <p>You can review the privacy policies of our ad partners here:</p>
+      <ul>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob Privacy Policy</a></li>
+        <li><a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta / Facebook Audience Network Privacy Policy</a></li>
+      </ul>
+
+      <div class="info-box">
+        <strong>Opt-Out:</strong> You can limit ad personalization by going to your device's
+        <strong>Settings → Google → Ads → Opt out of Ads Personalization</strong>, or by resetting your
+        Advertising ID. For Meta ads, visit your <a href="https://www.facebook.com/ads/preferences" target="_blank" rel="noopener">Facebook Ad Preferences</a>.
+      </div>
+    </section>
+
+    <!-- ── S5: Third-Party Services ──────────────────────────── -->
+    <section class="section-card" id="s5">
+      <div class="section-header">
+        <div class="section-icon">🔗</div>
+        <div>
+          <div class="section-num">Section 05</div>
+          <h2>Third-Party Services</h2>
+        </div>
+      </div>
+      <p>
+        The App may integrate third-party SDKs or services for advertising, analytics, or infrastructure purposes.
+        Each third-party service operates under its own privacy policy and data practices, which we encourage you to review.
+      </p>
+      <ul>
+        <li><strong>Google AdMob</strong> — Advertising SDK (Google LLC)</li>
+        <li><strong>Facebook Audience Network</strong> — Advertising SDK (Meta Platforms, Inc.)</li>
+        <li><strong>Firebase Crashlytics</strong> (if applicable) — Crash reporting and diagnostics (Google LLC)</li>
+      </ul>
+      <div class="warn-box">
+        ⚠️ &nbsp;We are not responsible for the data practices of third-party services. Their collection and use of data is
+        governed solely by their own privacy policies. We recommend reviewing those policies before using the App.
+      </div>
+    </section>
+
+    <!-- ── S6: Legal Basis (GDPR) ────────────────────────────── -->
+    <section class="section-card" id="s6">
+      <div class="section-header">
+        <div class="section-icon">⚖️</div>
+        <div>
+          <div class="section-num">Section 06</div>
+          <h2>Legal Basis for Processing (GDPR)</h2>
+        </div>
+      </div>
+      <p>
+        If you are located in the European Economic Area (EEA), United Kingdom, or Switzerland, we process
+        data based on the following legal grounds under the General Data Protection Regulation (GDPR):
+      </p>
+      <ul>
+        <li><strong>Legitimate Interests:</strong> To operate and improve the App, prevent abuse, and ensure security.</li>
+        <li><strong>Consent:</strong> For personalized advertising and analytics where required by applicable law.
+          You may withdraw consent at any time via your device settings.</li>
+        <li><strong>Legal Obligation:</strong> To comply with applicable laws and regulations.</li>
+      </ul>
+      <div class="info-box">
+        <strong>Note for EEA users:</strong> Upon first launch, the App may present a consent dialog in accordance with
+        the IAB Transparency and Consent Framework (TCF) to obtain your consent for personalized advertising.
+      </div>
+    </section>
+
+    <!-- ── S7: Data Retention ────────────────────────────────── -->
+    <section class="section-card" id="s7">
+      <div class="section-header">
+        <div class="section-icon">🗓️</div>
+        <div>
+          <div class="section-num">Section 07</div>
+          <h2>Data Retention</h2>
+        </div>
+      </div>
+      <p>
+        We retain data only as long as necessary to fulfill the purposes described in this Privacy Policy or as
+        required by law:
+      </p>
+      <ul>
+        <li><strong>Diagnostic &amp; Crash Logs:</strong> Retained for up to 90 days, then automatically deleted.</li>
+        <li><strong>Ad Interaction Data:</strong> Retained by third-party ad networks per their own retention policies.</li>
+        <li><strong>Downloaded Media:</strong> Stored locally on your device. We have no access to or control over this data.</li>
+        <li><strong>Support Requests:</strong> Retained only as long as needed to resolve the support inquiry.</li>
+      </ul>
+      <p>
+        Uninstalling the App removes all locally stored App data from your device. Data held by third-party
+        SDKs is subject to those providers' retention schedules.
+      </p>
+    </section>
+
+    <!-- ── S8: Data Security ──────────────────────────────────── -->
+    <section class="section-card" id="s8">
+      <div class="section-header">
+        <div class="section-icon">🔐</div>
+        <div>
+          <div class="section-num">Section 08</div>
+          <h2>Data Security</h2>
+        </div>
+      </div>
+      <p>
+        We implement commercially reasonable technical and organizational measures to protect information
+        processed through the App against unauthorized access, alteration, disclosure, or destruction.
+        These include:
+      </p>
+      <ul>
+        <li>Encrypted data transmission using HTTPS/TLS for all network communications.</li>
+        <li>Minimal data collection principle — we only collect what is necessary.</li>
+        <li>Regular review of our data practices and third-party SDK integrations.</li>
+      </ul>
+      <div class="warn-box">
+        ⚠️ &nbsp;Please note that no method of electronic storage or transmission over the internet is 100% secure.
+        While we strive to protect your information, we cannot guarantee absolute security.
+      </div>
+    </section>
+
+    <!-- ── S9: Children's Privacy ────────────────────────────── -->
+    <section class="section-card" id="s9">
+      <div class="section-header">
+        <div class="section-icon">🧒</div>
+        <div>
+          <div class="section-num">Section 09</div>
+          <h2>Children's Privacy</h2>
+        </div>
+      </div>
+      <p>
+        The App is <strong>not directed at children under the age of 13</strong> (or 16 in the EEA where applicable).
+        We do not knowingly collect personal information from children. The App is intended for general audiences aged 13 and above.
+      </p>
+      <p>
+        If you are a parent or guardian and believe your child has provided us with personal information,
+        please contact us immediately at <strong>your-email@example.com</strong> so we can take appropriate steps
+        to delete such information.
+      </p>
+      <div class="info-box">
+        In compliance with <strong>COPPA</strong> (Children's Online Privacy Protection Act) and applicable international
+        regulations, we will promptly delete any data found to have been collected from a child under 13 upon notification.
+      </div>
+    </section>
+
+    <!-- ── S10: Your Rights & Choices ────────────────────────── -->
+    <section class="section-card" id="s10">
+      <div class="section-header">
+        <div class="section-icon">🧑‍⚖️</div>
+        <div>
+          <div class="section-num">Section 10</div>
+          <h2>Your Rights &amp; Choices</h2>
+        </div>
+      </div>
+      <p>Depending on your location, you may have the following rights regarding your data:</p>
+      <ul>
+        <li><strong>Access:</strong> Request information about what data is collected about you.</li>
+        <li><strong>Deletion:</strong> Request deletion of your personal data (subject to legal limitations).</li>
+        <li><strong>Opt-Out of Personalized Ads:</strong> Opt out via Android device settings or by resetting your Advertising ID.</li>
+        <li><strong>Withdraw Consent:</strong> Where processing is based on consent, you may withdraw it at any time without affecting prior processing.</li>
+        <li><strong>Uninstall:</strong> Remove the App at any time to stop all future data collection through the App.</li>
+      </ul>
+
+      <div class="divider"></div>
+      <p><strong>To manage permissions on your device:</strong></p>
+      <ul>
+        <li>Go to <strong>Settings → Apps → Download Video: Anime, Reels HD → Permissions</strong> to enable or disable access to Photos/Videos.</li>
+        <li>Disabling permissions may limit certain App features (e.g., saving downloaded media to your gallery).</li>
+      </ul>
+      <div class="info-box">
+        EEA, UK, and California (CCPA) residents may have additional rights. Contact us at
+        <strong>your-email@example.com</strong> to exercise any data rights.
+      </div>
+    </section>
+
+    <!-- ── S11: Policy Changes ───────────────────────────────── -->
+    <section class="section-card" id="s11">
+      <div class="section-header">
+        <div class="section-icon">🔄</div>
+        <div>
+          <div class="section-num">Section 11</div>
+          <h2>Changes to This Privacy Policy</h2>
+        </div>
+      </div>
+      <p>
+        We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements,
+        or third-party services we use. When we make material changes, we will:
+      </p>
+      <ul>
+        <li>Update the <strong>Effective Date</strong> at the top of this page.</li>
+        <li>Post the revised policy at this URL (on our GitHub Pages or linked page).</li>
+        <li>Where required by law, provide additional notice (e.g., via an in-app notification).</li>
+      </ul>
+      <p>
+        We encourage you to review this Privacy Policy periodically. Your continued use of the App after any
+        changes are posted constitutes your acceptance of the updated policy.
+      </p>
+    </section>
+
+    <!-- ── S12: Contact Us ───────────────────────────────────── -->
+    <section class="section-card" id="s12">
+      <div class="section-header">
+        <div class="section-icon">✉️</div>
+        <div>
+          <div class="section-num">Section 12</div>
+          <h2>Contact Us</h2>
+        </div>
+      </div>
+      <p>
+        If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices,
+        please contact us using the information below. We aim to respond to all inquiries within
+        <strong>5 business days</strong>.
+      </p>
+      <div class="contact-card">
+        <div class="contact-icon">📬</div>
+        <div class="contact-info">
+          <h3>Download Video: Anime, Reels HD — Support</h3>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:your-email@example.com">your-email@example.com</a>
+          </p>
+          <p>Subject line: <em>"Privacy Policy Inquiry — Download Video App"</em></p>
+        </div>
+      </div>
+      <div class="warn-box" style="margin-top:18px;">
+        📌 &nbsp;Replace <strong>your-email@example.com</strong> with your real support email address before
+        publishing. Also upload your app icon as <strong>app-icon.png</strong> in the same folder if hosting on GitHub Pages.
+      </div>
+    </section>
+
+    <!-- ── FOOTER ────────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="footer-brand">
+        &copy; 2026 <strong>Download Video: Anime, Reels HD</strong>. All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="mailto:your-email@example.com">Contact</a>
+      </div>
+    </footer>
+
+  </div>
 </body>
 </html>
