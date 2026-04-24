@@ -127,6 +127,13 @@
       backdrop-filter: blur(4px);
     }
 
+    .app-icon {
+       width: 100%;
+       height: 100%;
+       object-fit: contain;
+       filter: brightness(0) invert(1);
+    }
+
     .hero-text { flex: 1; min-width: 220px; }
 
     .hero-eyebrow {
@@ -493,7 +500,9 @@
     <!-- ── HERO ─────────────────────────────────────────────── -->
     <header class="hero">
       <div class="hero-inner">
-        <div class="app-icon-wrap">🎬</div>
+        <div class="app-icon-wrap">
+            <img src="icon.png" class="app-icon">
+              </div>
         <div class="hero-text">
           <div class="hero-eyebrow">
             <span>📄</span> Legal Document
